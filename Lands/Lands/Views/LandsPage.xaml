@@ -13,14 +13,13 @@
                 Text="{Binding Filter, Mode=TwoWay}"
                 SearchCommand="{Binding SearchCommand}">
             </SearchBar>
-            
-            <ListView
-                HasUnevenRows="True"
-                IsPullToRefreshEnabled="True"
+
+            <ListView 
+                HasUnevenRows="true" 
+                IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
                 ItemsSource="{Binding Lands}"
                 RefreshCommand="{Binding RefreshCommand}">
-
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -29,27 +28,26 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <StackLayout
-                                    Grid.Column="0"
-                                    VerticalOptions="Center">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Medium"
-                                        Text="{Binding Name}"
-                                        TextColor="Black">
+
+                                <StackLayout 
+                                        Grid.Column="0"
+                                        VerticalOptions="Center">
+                                    <Label 
+                                            FontAttributes="Bold"
+                                            FontSize="Medium" 
+                                            Text="{Binding Name}"
+                                            TextColor="Black">
                                     </Label>
-                                    <Label
-                                        Text="{Binding Capital}"
-                                        TextColor="Black">
+                                    <Label 
+                                            Text="{Binding Capital}"
+                                            TextColor="Black">
                                     </Label>
-                                    <StackLayout>
-                                        <Image
-                                            Grid.Column="1"
-                                            HorizontalOptions="End"
-                                            Source="ic_chevron_right">
-                                        </Image>
-                                    </StackLayout>
                                 </StackLayout>
+                                <Image 
+                                        Grid.Column="1"
+                                        HorizontalOptions="End" 
+                                        Source="ic_chevron_right">
+                                </Image>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
