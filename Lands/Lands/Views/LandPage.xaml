@@ -12,6 +12,7 @@
                 Padding="5">
 
                 <Label
+                    HorizontalOptions="Center"
                     FontSize="Large"
                     FontAttributes="Bold"
                     Text="{Binding Land.Name}"
