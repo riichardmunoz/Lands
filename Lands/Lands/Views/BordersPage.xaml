@@ -7,6 +7,7 @@
              Title="Borders">
     <ContentPage.Content>
         <StackLayout
+            Padding="5"
             BindingContext="{Binding Land}">
             <Label
                     HorizontalOptions="Center"
@@ -25,11 +26,10 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="3*"/>
+                                    
                                 </Grid.ColumnDefinitions>
                                 <Label 
                                     Grid.Column="0"
-                                    FontAttributes="Bold"
-                                    FontSize="Medium" 
                                     Text="{Binding Code}"
                                     TextColor="Black">
                                     </Label>
@@ -38,6 +38,7 @@
                                     Text="{Binding Name}"
                                     TextColor="Black">
                                 </Label>
+                                
                                 
                             </Grid>
                         </ViewCell>
