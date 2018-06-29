@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lands.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +47,14 @@ namespace Lands.ViewModels
             return instance;
         }
 
+        #endregion
+
+        #region Properties
+        public List<Land> LandsList
+        {
+            get;
+            set;
+        }
         #endregion
     }
 }
