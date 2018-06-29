@@ -90,6 +90,39 @@
         }
         #endregion
 
+        #region Methods
+        private IEnumerable<LandItemViewModel> ToLandItemViewModel()
+        {
+            return landsList.Select(l => new LandItemViewModel
+            {
+                Alpha2Code = l.Alpha2Code,
+                Alpha3Code = l.Alpha3Code,
+                AltSpellings = l.AltSpellings,
+                Area = l.Area,
+                Borders = l.Borders,
+                CallingCodes = l.CallingCodes,
+                Capital = l.Capital,
+                Cioc = l.Cioc,
+                Currencies = l.Currencies,
+                Demonym = l.Demonym,
+                Flag = l.Flag,
+                Gini = l.Gini,
+                Languages = l.Languages,
+                Latlng = l.Latlng,
+                Name = l.Name,
+                NativeName = l.NativeName,
+                NumericCode = l.NumericCode,
+                Population = l.Population,
+                Region = l.Region,
+                RegionalBlocs = l.RegionalBlocs,
+                Subregion = l.Subregion,
+                Timezones = l.Timezones,
+                TopLevelDomain = l.TopLevelDomain,
+                Translations = l.Translations,
+            });
+        }
+        #endregion
+
         #region Commands
         public ICommand RefreshCommand
         {
@@ -124,38 +157,7 @@
 
         #endregion
 
-        #region Methods
-        private IEnumerable<LandItemViewModel> ToLandItemViewModel()
-        {
-            return landsList.Select(l => new LandItemViewModel
-            {
-                Alpha2Code = l.Alpha2Code,
-                Alpha3Code = l.Alpha3Code,
-                AltSpellings = l.AltSpellings,
-                Area = l.Area,
-                Borders = l.Borders,
-                CallingCodes = l.CallingCodes,
-                Capital = l.Capital,
-                Cioc = l.Cioc,
-                Currencies = l.Currencies,
-                Demonym = l.Demonym,
-                Flag = l.Flag,
-                Gini = l.Gini,
-                Languages = l.Languages,
-                Latlng = l.Latlng,
-                Name = l.Name,
-                NativeName = l.NativeName,
-                NumericCode = l.NumericCode,
-                Population = l.Population,
-                Region = l.Region,
-                RegionalBlocs = l.RegionalBlocs,
-                Subregion = l.Subregion,
-                Timezones = l.Timezones,
-                TopLevelDomain = l.TopLevelDomain,
-                Translations = l.Translations,
-            });
-        }
-        #endregion
+       
 
     }
 }

@@ -1,7 +1,6 @@
-﻿
-
-namespace Lands.ViewModels
+﻿namespace Lands.ViewModels
 {
+    using Lands.Models;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -9,5 +8,19 @@ namespace Lands.ViewModels
     using System.Threading.Tasks;
     public class LandViewModel
     {
+        #region Propperties
+        public Land Land
+        {
+            get;
+            set;
+        }
+        #endregion
+
+        #region Constructors
+        public LandViewModel(Land land)
+        {
+            this.Land = land;
+        } 
+        #endregion
     }
 }
