@@ -142,6 +142,9 @@ namespace Lands.ViewModels
             this.IsRemembered = true;
             this.isEnabled = true;
 
+            this.Email = "riichardmunoz@gmail.com";
+            this.Password = "123456";
+
         }
         #endregion
     }
